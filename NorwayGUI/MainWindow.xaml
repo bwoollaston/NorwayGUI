@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NorwayGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#272525">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+                <ColumnDefinition.Width>2*</ColumnDefinition.Width>
+            </ColumnDefinition>
+            <ColumnDefinition>
+                <ColumnDefinition.Width>*</ColumnDefinition.Width>
+            </ColumnDefinition>
+            <ColumnDefinition>
+                <ColumnDefinition.Width>*</ColumnDefinition.Width>
+            </ColumnDefinition>
+            <ColumnDefinition>
+                <ColumnDefinition.Width>*</ColumnDefinition.Width>
+            </ColumnDefinition>
+            <ColumnDefinition>
+                <ColumnDefinition.Width>*</ColumnDefinition.Width>
+            </ColumnDefinition>
 
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition>
+                <RowDefinition.Height>*</RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+                <RowDefinition.Height>*</RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+                <RowDefinition.Height>*</RowDefinition.Height>
+            </RowDefinition>
+            <RowDefinition>
+                <RowDefinition.Height>*</RowDefinition.Height>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="0" Grid.RowSpan="4" Background="#818181"/>
     </Grid>
 </Window>
