@@ -9,7 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition>
-                <ColumnDefinition.Width>2*</ColumnDefinition.Width>
+                <ColumnDefinition.Width>*</ColumnDefinition.Width>
             </ColumnDefinition>
             <ColumnDefinition>
                 <ColumnDefinition.Width>*</ColumnDefinition.Width>
@@ -39,6 +39,12 @@
                 <RowDefinition.Height>*</RowDefinition.Height>
             </RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.Column="0" Grid.RowSpan="4" Background="#818181"/>
+        <StackPanel Grid.Column="1" Grid.Row="2">
+            <Button Name="RunMain" Content="Load Program" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="RunMain_Click"/>
+            <Label  Name="lblProgramSatus" Content="{Binding PrglblText, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" 
+                    Background="{Binding PrglblColor, Mode=OneWay}">
+            </Label>
+        </StackPanel>
+
     </Grid>
 </Window>
