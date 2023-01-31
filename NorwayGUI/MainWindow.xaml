@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:NorwayGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="#272525">
+    <Window.DataContext>local:MainWindowViewModel</Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition>
@@ -40,7 +41,8 @@
             </RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <Button Name="RunMain" Content="Load Program" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="RunMain_Click"/>
+            <Button Name="RunMain" Content="Load Program" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="RunMain_Click"
+                    Command="{Binding ButtonCommand}"/>
             <Label  Name="lblProgramSatus" Content="{Binding PrglblText, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" 
                     Background="{Binding PrglblColor, Mode=OneWay}">
             </Label>

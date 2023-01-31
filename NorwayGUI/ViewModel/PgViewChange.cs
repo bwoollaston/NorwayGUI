@@ -18,16 +18,13 @@ using System.Collections.ObjectModel;
 
 namespace NorwayGUI.ViewModel
 {
-    internal class PrgViewChange
+    public class PrgViewChange
     {
         public bool IsPrgLoading { get; set; }
         public Brush PrglblColor { get; set; }
         public string PrglblText { get; set; }
 
-        public PrgViewChange()
-        {
-            Init();
-        }
+        public PrgViewChange() => Init();
         public void Init()
         {
             IsPrgLoading = false;
