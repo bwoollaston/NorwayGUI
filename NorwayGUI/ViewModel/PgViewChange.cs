@@ -24,7 +24,11 @@ namespace NorwayGUI.ViewModel
         public Brush PrglblColor { get; set; }
         public string PrglblText { get; set; }
 
-        public PrgViewChange() => Init();
+        public PrgViewChange()
+        {
+            Init();
+        }
+
         public void Init()
         {
             IsPrgLoading = false;

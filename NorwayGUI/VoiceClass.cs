@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Input;
 
-namespace NorwayGUI.ViewModel
+namespace NorwayGUI
 {
-    public class MainWindowViewModel
+    internal class VoiceClass
     {
-        
+
     }
 }

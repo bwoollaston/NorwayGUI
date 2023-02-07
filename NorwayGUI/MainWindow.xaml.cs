@@ -40,5 +40,9 @@ namespace NorwayGUI
             }
         }
 
+        private void VoiceChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
