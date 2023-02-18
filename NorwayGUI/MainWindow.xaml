@@ -8,10 +8,6 @@
         Title="MainWindow" Height="450" Width="800" Background="#272525">
     <Window.DataContext>local:MainWindowViewModel</Window.DataContext>
     <Grid>
-        <TabControl Grid.ColumnSpan="5" Grid.RowSpan="4" Background="#272525" >
-            <TabItem Header="Program" MinWidth="100"/>
-            <TabItem Header="Read" MinWidth="100"/>
-        </TabControl>
         <Grid.ColumnDefinitions>
             <ColumnDefinition>
                 <ColumnDefinition.Width>*</ColumnDefinition.Width>
@@ -47,12 +43,17 @@
         <StackPanel Grid.Column="1" Grid.Row="2">
             <Button Name="RunMain" Content="Load Program" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="RunMain_Click"
                     Command="{Binding ButtonCommand}"/>
-            <Label  Name="lblProgramSatus" Content="{Binding PrglblText, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" 
-                    Background="{Binding PrglblColor, Mode=OneWay}"/>
+            <Label  Name="lblProgramSatus" Content="Ready to Program" HorizontalAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Center" 
+                    Background="Green"/>
         </StackPanel>
-            <ComboBox Name="VoiceSelect" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" SelectionChanged="VoiceChanged">
-                <ComboBoxItem Content="Voice Active"/>
-                <ComboBoxItem Content="No Voice"/> s
-            </ComboBox>
+        <ComboBox Name="VoiceSelect" Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" SelectionChanged="VoiceChanged">
+            <ComboBoxItem Content="Voice Active"/>
+            <ComboBoxItem Content="No Voice"/>
+        </ComboBox>
+        <TabControl Grid.ColumnSpan="5" Grid.RowSpan="4" Background="Transparent" >
+            <TabItem Name="ProgTab" Header="Program" MinWidth="100"/>
+            <TabItem Name="ReadTab" Header="Read" MinWidth="100"/>
+        </TabControl>
+        <Button Name="test" Content="Button" Click="Test_Click"/>
     </Grid>
 </Window>
